@@ -1,0 +1,1459 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 410
+  Top = 253
+  Width = 1370
+  Height = 731
+  Caption = 'Dicion'#225'rio Antonio'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1362
+    Height = 700
+    ActivePage = tsCampos
+    Align = alClient
+    TabOrder = 0
+    object tsChamado: TTabSheet
+      Caption = 'Chamado'
+      ImageIndex = 8
+      object mmChamado: TMemo
+        Left = 0
+        Top = 41
+        Width = 1354
+        Height = 631
+        Align = alClient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 1354
+        Height = 41
+        Align = alTop
+        TabOrder = 1
+        object edtCodChamado: TEdit
+          Left = 16
+          Top = 12
+          Width = 164
+          Height = 21
+          TabOrder = 0
+        end
+        object btnCarregarConsultas: TButton
+          Left = 184
+          Top = 9
+          Width = 113
+          Height = 25
+          Caption = 'Carregar Consultas'
+          TabOrder = 1
+          OnClick = btnCarregarConsultasClick
+        end
+        object btnSalvaConsulta: TButton
+          Left = 304
+          Top = 9
+          Width = 113
+          Height = 25
+          Caption = 'Salvar'
+          TabOrder = 2
+          OnClick = btnSalvaConsultaClick
+        end
+      end
+    end
+    object tsConsulta: TTabSheet
+      Caption = 'Consulta'
+      ImageIndex = 3
+      object Label7: TLabel
+        Left = 1071
+        Top = 36
+        Width = 25
+        Height = 13
+        Caption = 'Tab :'
+      end
+      object Label8: TLabel
+        Left = 1060
+        Top = 62
+        Width = 39
+        Height = 13
+        Caption = 'Campo :'
+      end
+      object Label9: TLabel
+        Left = 712
+        Top = 15
+        Width = 51
+        Height = 13
+        Caption = 'Chamado :'
+      end
+      object Label10: TLabel
+        Left = 12
+        Top = 344
+        Width = 39
+        Height = 13
+        Caption = 'Campo :'
+      end
+      object Label11: TLabel
+        Left = 188
+        Top = 344
+        Width = 53
+        Height = 13
+        Caption = 'Tipo Dado:'
+      end
+      object mmConsulta: TMemo
+        Left = 1
+        Top = 14
+        Width = 1050
+        Height = 40
+        ScrollBars = ssBoth
+        TabOrder = 0
+        Visible = False
+      end
+      object mmcons1: TMemo
+        Left = 0
+        Top = 33
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        Lines.Strings = (
+          'Select Sysdate from dual')
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 1
+      end
+      object mmcons2: TMemo
+        Left = 0
+        Top = 37
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 2
+      end
+      object mmcons3: TMemo
+        Left = 0
+        Top = 32
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 3
+      end
+      object mmcons4: TMemo
+        Left = 0
+        Top = 32
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 4
+      end
+      object mmcons5: TMemo
+        Left = 0
+        Top = 33
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 5
+      end
+      object RadioGroup1: TRadioGroup
+        Left = 8
+        Top = 363
+        Width = 1009
+        Height = 36
+        Caption = 'Executar Consulta'
+        Columns = 10
+        ItemIndex = 0
+        Items.Strings = (
+          '1'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10')
+        TabOrder = 6
+        OnClick = RadioGroup1Click
+      end
+      object Btnconsgera: TButton
+        Left = 381
+        Top = 337
+        Width = 75
+        Height = 23
+        Caption = 'Consultar'
+        TabOrder = 7
+        OnClick = BtnconsgeraClick
+      end
+      object dbgGeral: TDBGrid
+        Left = 8
+        Top = 404
+        Width = 1043
+        Height = 249
+        DataSource = dsConsultatodos
+        ReadOnly = True
+        TabOrder = 8
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnColEnter = dbgGeralColEnter
+      end
+      object bnconsCampoConsulta: TButton
+        Left = 1124
+        Top = 81
+        Width = 93
+        Height = 25
+        Caption = 'Consulta Campo'
+        TabOrder = 9
+        OnClick = bnconsCampoConsultaClick
+      end
+      object mmAnotacao: TMemo
+        Left = 1064
+        Top = 112
+        Width = 185
+        Height = 545
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 10
+      end
+      object edttblnam: TEdit
+        Left = 1105
+        Top = 29
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 11
+      end
+      object edtfldNam: TEdit
+        Left = 1106
+        Top = 56
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 12
+      end
+      object mmcons6: TMemo
+        Left = 1
+        Top = 33
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 13
+      end
+      object mmcons7: TMemo
+        Left = 1
+        Top = 34
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 14
+      end
+      object mmcons8: TMemo
+        Left = 3
+        Top = 34
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 15
+      end
+      object mmcons9: TMemo
+        Left = 0
+        Top = 35
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 16
+      end
+      object mmcons10: TMemo
+        Left = 3
+        Top = 33
+        Width = 1050
+        Height = 300
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 17
+      end
+      object edtnamCampoConsulta: TEdit
+        Left = 59
+        Top = 337
+        Width = 121
+        Height = 21
+        TabOrder = 18
+      end
+      object edtTipCampo: TEdit
+        Left = 247
+        Top = 337
+        Width = 121
+        Height = 21
+        TabOrder = 19
+      end
+    end
+    object TsFuncoes: TTabSheet
+      Caption = 'Fun'#231#245'es'
+      ImageIndex = 1
+      object edPesFuncao: TEdit
+        Left = 144
+        Top = 24
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 0
+        Text = 'CADASTRO'
+      end
+      object btnPesquisaFuncao: TButton
+        Left = 424
+        Top = 24
+        Width = 75
+        Height = 25
+        Caption = 'Pesquisar'
+        TabOrder = 1
+        OnClick = btnPesquisaFuncaoClick
+      end
+      object DBGrid2: TDBGrid
+        Left = 64
+        Top = 80
+        Width = 977
+        Height = 281
+        DataSource = DataSource1
+        ReadOnly = True
+        TabOrder = 2
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+      object edPesFuncao2: TEdit
+        Left = 272
+        Top = 24
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 3
+      end
+      object memofuncao: TMemo
+        Left = 64
+        Top = 368
+        Width = 969
+        Height = 185
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 4
+      end
+    end
+    object tsTabela: TTabSheet
+      Caption = 'Tabela'
+      object ScrollBox1: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 1354
+        Height = 672
+        VertScrollBar.Position = 253
+        Align = alClient
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 78
+          Top = -229
+          Width = 70
+          Height = 13
+          Caption = 'Nome Tabela :'
+        end
+        object Label2: TLabel
+          Left = 88
+          Top = -205
+          Width = 54
+          Height = 13
+          Caption = 'Descri'#231#227'o :'
+        end
+        object Label3: TLabel
+          Left = 88
+          Top = -181
+          Width = 54
+          Height = 13
+          Caption = 'Descri'#231#227'o :'
+        end
+        object GridTabela: TDBGrid
+          Left = 24
+          Top = -166
+          Width = 961
+          Height = 108
+          DataSource = DataSource1
+          ReadOnly = True
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = GridTabelaDblClick
+        end
+        object Button1: TButton
+          Left = 288
+          Top = -197
+          Width = 75
+          Height = 25
+          Caption = 'Pesquisar'
+          TabOrder = 1
+          OnClick = Button1Click
+        end
+        object edtnameTbl: TEdit
+          Left = 152
+          Top = -237
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          TabOrder = 2
+        end
+        object memTabConsulta: TMemo
+          Left = 24
+          Top = -29
+          Width = 1352
+          Height = 144
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          ParentFont = False
+          PopupMenu = PopupMenu1
+          ScrollBars = ssBoth
+          TabOrder = 3
+        end
+        object edtdesctbl: TEdit
+          Left = 152
+          Top = -213
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          TabOrder = 4
+          Text = 'CADASTRO'
+        end
+        object edtdesctbl1: TEdit
+          Left = 152
+          Top = -189
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          TabOrder = 5
+        end
+        object dbgTabelaConsulta: TDBGrid
+          Left = 3
+          Top = 147
+          Width = 1340
+          Height = 160
+          DataSource = dsTabela
+          ReadOnly = True
+          TabOrder = 6
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnColEnter = dbgTabelaConsultaColEnter
+          OnDblClick = dbgTabelaConsultaDblClick
+        end
+        object memoTabAdicionadas: TMemo
+          Left = 1000
+          Top = -246
+          Width = 361
+          Height = 120
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          ParentFont = False
+          ScrollBars = ssBoth
+          TabOrder = 7
+        end
+        object edtNmTab: TEdit
+          Left = 23
+          Top = -56
+          Width = 121
+          Height = 21
+          TabOrder = 8
+        end
+        object edtNomSql: TEdit
+          Left = 525
+          Top = 117
+          Width = 121
+          Height = 21
+          TabOrder = 9
+        end
+        object edtDescrCampo: TEdit
+          Left = 24
+          Top = 117
+          Width = 257
+          Height = 21
+          TabOrder = 10
+        end
+        object edtSql: TEdit
+          Left = 648
+          Top = 117
+          Width = 249
+          Height = 21
+          TabOrder = 11
+        end
+        object dbgValorCampo: TDBGrid
+          Left = 3
+          Top = 313
+          Width = 1337
+          Height = 108
+          DataSource = dsEnum
+          ReadOnly = True
+          TabOrder = 12
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+        end
+        object edtdescamp: TEdit
+          Left = 288
+          Top = 117
+          Width = 233
+          Height = 21
+          TabOrder = 13
+        end
+        object memAdicionarCampo: TMemo
+          Left = 1000
+          Top = -125
+          Width = 367
+          Height = 91
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          ParentFont = False
+          ScrollBars = ssBoth
+          TabOrder = 14
+        end
+        object BtnConsultarTab: TBitBtn
+          Left = 168
+          Top = -58
+          Width = 145
+          Height = 25
+          Caption = 'Consultar'
+          Default = True
+          TabOrder = 15
+          OnClick = BitBtn1Click
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000000000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333333333333333330000333333333333333333333333F33333333333
+            00003333344333333333333333388F3333333333000033334224333333333333
+            338338F3333333330000333422224333333333333833338F3333333300003342
+            222224333333333383333338F3333333000034222A22224333333338F338F333
+            8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+            33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+            0000333333333A222433333333333338F338F33300003333333333A222433333
+            333333338F338F33000033333333333A222433333333333338F338F300003333
+            33333333A222433333333333338F338F00003333333333333A22433333333333
+            3338F38F000033333333333333A223333333333333338F830000333333333333
+            333A333333333333333338330000333333333333333333333333333333333333
+            0000}
+          NumGlyphs = 2
+        end
+        object btnCampos: TBitBtn
+          Left = 320
+          Top = -57
+          Width = 75
+          Height = 25
+          Caption = 'Campos->'
+          TabOrder = 16
+          OnClick = btnCamposClick
+        end
+        object cbbSql: TComboBox
+          Left = 904
+          Top = 117
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          ItemIndex = 0
+          TabOrder = 17
+          Text = 'AND COL ='
+          OnChange = cbbSqlChange
+          Items.Strings = (
+            'AND COL ='
+            'AND COL IN ( ? )'
+            'AND LIKE UPPER( ? )'
+            'AND COL BETWEEN COL AND COL')
+        end
+        object btnGeraSql: TButton
+          Left = 1056
+          Top = 115
+          Width = 75
+          Height = 25
+          Caption = 'Gerar'
+          TabOrder = 18
+          OnClick = btnGeraSqlClick
+        end
+        object dbgRelacionamento: TDBGrid
+          Left = 0
+          Top = 427
+          Width = 1337
+          Height = 110
+          DataSource = dsRelacionamento
+          ReadOnly = True
+          TabOrder = 19
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = dbgRelacionamentoDblClick
+        end
+        object dbgConsultaRelacionamento: TDBGrid
+          Left = 0
+          Top = 541
+          Width = 1337
+          Height = 120
+          DataSource = dsDadosConsultaRelacionamento
+          ReadOnly = True
+          TabOrder = 20
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+        end
+        object mmsqlrelacionamento: TMemo
+          Left = 1360
+          Top = -245
+          Width = 513
+          Height = 713
+          TabOrder = 21
+        end
+      end
+    end
+    object tsCampos: TTabSheet
+      Caption = 'Campos'
+      ImageIndex = 4
+      object Label4: TLabel
+        Left = 72
+        Top = 40
+        Width = 39
+        Height = 13
+        Caption = 'Tabela :'
+      end
+      object Label5: TLabel
+        Left = 58
+        Top = 62
+        Width = 54
+        Height = 13
+        Caption = 'Descri'#231#227'o :'
+      end
+      object Label6: TLabel
+        Left = 45
+        Top = 85
+        Width = 70
+        Height = 13
+        Caption = 'Nome Campo :'
+      end
+      object edtcamposnmtbl: TEdit
+        Left = 120
+        Top = 32
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 0
+      end
+      object dbgCampos: TDBGrid
+        Left = 48
+        Top = 113
+        Width = 1297
+        Height = 256
+        DataSource = DataSource1
+        PopupMenu = PopupMenu2
+        ReadOnly = True
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnDblClick = dbgCamposDblClick
+        OnKeyDown = dbgCamposKeyDown
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'destbl'
+            Title.Caption = 'Descri'#231#227'o tabela'
+            Width = 179
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'tblnam'
+            Title.Caption = 'Tabela'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'fldnam'
+            Title.Caption = 'Campo'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'lgntit'
+            Title.Caption = 'Descri'#231#227'o tela'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'desfld'
+            Title.Caption = 'Descri'#231#227'o Campo'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'enunam'
+            Title.Caption = 'Nome lista'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'dattyp'
+            Title.Caption = 'Tipo de Dados'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'mskfld'
+            Title.Caption = 'M'#225'scara'
+            Visible = True
+          end>
+      end
+      object btnPesquisarCampo: TButton
+        Left = 248
+        Top = 72
+        Width = 75
+        Height = 25
+        Caption = 'Pesquisar'
+        TabOrder = 2
+        OnClick = btnPesquisarCampoClick
+      end
+      object edtcamposdescampo: TEdit
+        Left = 120
+        Top = 56
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 3
+      end
+      object edtConsCampfldnam: TEdit
+        Left = 120
+        Top = 80
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 4
+      end
+      object btnVoltarTab: TButton
+        Left = 328
+        Top = 72
+        Width = 75
+        Height = 25
+        Caption = '<-Tabela'
+        TabOrder = 5
+        OnClick = btnVoltarTabClick
+      end
+      object mmcpCampAdic: TMemo
+        Left = 48
+        Top = 496
+        Width = 961
+        Height = 89
+        ScrollBars = ssBoth
+        TabOrder = 6
+      end
+      object dbgListaEnum: TDBGrid
+        Left = 48
+        Top = 376
+        Width = 961
+        Height = 115
+        DataSource = dsEnum
+        TabOrder = 7
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+    end
+    object TSRegra1: TTabSheet
+      Caption = 'Regra'
+      ImageIndex = 5
+      object mmReg1: TMemo
+        Left = 0
+        Top = 0
+        Width = 1254
+        Height = 668
+        Align = alClient
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+    end
+    object TsRegra2: TTabSheet
+      Caption = 'Regra'
+      ImageIndex = 6
+      object mmReg2: TMemo
+        Left = 0
+        Top = 0
+        Width = 1254
+        Height = 668
+        Align = alClient
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+    end
+    object TsRegra3: TTabSheet
+      Caption = 'Regra'
+      ImageIndex = 7
+      object mmReg3: TMemo
+        Left = 0
+        Top = 0
+        Width = 1254
+        Height = 668
+        Align = alClient
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+    end
+    object tsEnum: TTabSheet
+      Caption = 'Lista Consulta'
+      ImageIndex = 9
+      object Label12: TLabel
+        Left = 48
+        Top = 16
+        Width = 34
+        Height = 13
+        Caption = 'Nome :'
+      end
+      object edtNomListaPesquisa: TEdit
+        Left = 88
+        Top = 10
+        Width = 121
+        Height = 21
+        CharCase = ecUpperCase
+        TabOrder = 0
+        OnKeyDown = edtNomListaPesquisaKeyDown
+      end
+      object dbgEnumPesquisa: TDBGrid
+        Left = 24
+        Top = 64
+        Width = 1377
+        Height = 529
+        DataSource = dsEnum
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+      end
+    end
+    object tsUtilidades: TTabSheet
+      Caption = 'Utilidades'
+      ImageIndex = 4
+      object Memo2: TMemo
+        Left = 329
+        Top = 345
+        Width = 465
+        Height = 233
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        Lines.Strings = (
+          '\\SRV-APL04\Senior\Sapiens\   Produ'#231#227'o'
+          ''
+          '\\srv-apl14\SeniorHomolog\Sapiens Homologa'#231#227'o')
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+      object grpSapiens: TGroupBox
+        Left = 16
+        Top = 32
+        Width = 260
+        Height = 97
+        Caption = 'Sapiens'
+        TabOrder = 1
+        object btnSapHomo: TButton
+          Left = 49
+          Top = 59
+          Width = 123
+          Height = 25
+          Caption = 'Sapiens Homologa'#231#227'o'
+          TabOrder = 0
+          OnClick = btnSapHomoClick
+        end
+        object btnSapProd: TButton
+          Left = 48
+          Top = 16
+          Width = 169
+          Height = 25
+          Caption = 'Sapiens Produ'#231#227'o'
+          TabOrder = 1
+          OnClick = btnSapProdClick
+        end
+      end
+      object grpSGU: TGroupBox
+        Left = 16
+        Top = 136
+        Width = 257
+        Height = 97
+        Caption = 'SGU'
+        TabOrder = 2
+        object btnSguHomog: TButton
+          Left = 46
+          Top = 16
+          Width = 75
+          Height = 25
+          Caption = 'Sgu Homog'
+          TabOrder = 0
+          OnClick = btnSguHomogClick
+        end
+        object btnSguProd: TButton
+          Left = 48
+          Top = 48
+          Width = 75
+          Height = 25
+          Caption = 'Sgu Prod'
+          TabOrder = 1
+          OnClick = btnSguProdClick
+        end
+      end
+      object grpCBDS: TGroupBox
+        Left = 16
+        Top = 256
+        Width = 257
+        Height = 105
+        Caption = 'CBDS'
+        TabOrder = 3
+        object btnCBDSProd: TButton
+          Left = 44
+          Top = 56
+          Width = 75
+          Height = 25
+          Caption = 'CBDSPROD'
+          TabOrder = 0
+          OnClick = btnCBDSProdClick
+        end
+        object Button3: TButton
+          Left = 43
+          Top = 24
+          Width = 145
+          Height = 25
+          Caption = 'CBDSHOMOLOGA'#199#195'O'
+          TabOrder = 1
+          OnClick = Button3Click
+        end
+      end
+      object grpRonda: TGroupBox
+        Left = 16
+        Top = 368
+        Width = 257
+        Height = 105
+        Caption = 'Ronda'
+        TabOrder = 4
+        object BtnPontoProd: TButton
+          Left = 40
+          Top = 16
+          Width = 129
+          Height = 25
+          Caption = 'Ronda Ponto Produ'#231#227'o'
+          TabOrder = 0
+          OnClick = BtnPontoProdClick
+        end
+      end
+      object grpUtilidades: TGroupBox
+        Left = 328
+        Top = 40
+        Width = 465
+        Height = 161
+        Caption = 'Utilidades'
+        TabOrder = 5
+        object btnSqlDeveloper: TButton
+          Left = 16
+          Top = 120
+          Width = 169
+          Height = 25
+          Caption = 'Sql Developer'
+          TabOrder = 0
+          OnClick = btnSqlDeveloperClick
+        end
+        object Button2: TButton
+          Left = 4
+          Top = 24
+          Width = 165
+          Height = 25
+          Caption = 'Calculadora'
+          TabOrder = 1
+          OnClick = Button2Click
+        end
+        object BtnNotepad: TButton
+          Left = 14
+          Top = 56
+          Width = 75
+          Height = 25
+          Caption = 'Notepad++'
+          TabOrder = 2
+          OnClick = BtnNotepadClick
+        end
+        object btNote: TButton
+          Left = 102
+          Top = 56
+          Width = 75
+          Height = 25
+          Caption = 'Notepad'
+          TabOrder = 3
+          OnClick = btNoteClick
+        end
+        object btnCaputrar: TButton
+          Left = 14
+          Top = 88
+          Width = 75
+          Height = 25
+          Caption = 'Print Tela'
+          TabOrder = 4
+          OnClick = btnCaputrarClick
+        end
+        object BtnCursor: TButton
+          Left = 240
+          Top = 32
+          Width = 75
+          Height = 25
+          Caption = 'Cursor'
+          TabOrder = 5
+          OnClick = BtnCursorClick
+        end
+      end
+      object grpIntegracao: TGroupBox
+        Left = 328
+        Top = 208
+        Width = 465
+        Height = 121
+        Caption = 'Integra'#231#245'es'
+        TabOrder = 6
+        object BtnReiniciaMid: TButton
+          Left = 48
+          Top = 24
+          Width = 161
+          Height = 25
+          Caption = 'Reinicia Integra'#231#227'o de pedido'
+          TabOrder = 0
+          OnClick = BtnReiniciaMidClick
+        end
+        object btnLogWMS: TButton
+          Left = 48
+          Top = 56
+          Width = 137
+          Height = 25
+          Caption = 'LOG Integra'#231#227'o WMS'
+          TabOrder = 1
+          OnClick = btnLogWMSClick
+        end
+      end
+    end
+    object TSMonitor: TTabSheet
+      Caption = 'TSMonitor'
+      ImageIndex = 10
+      object edtSid: TEdit
+        Left = 96
+        Top = 128
+        Width = 121
+        Height = 21
+        TabOrder = 0
+      end
+      object Memo1: TMemo
+        Left = 88
+        Top = 16
+        Width = 377
+        Height = 89
+        Lines.Strings = (
+          
+            'select * from v$session ses where upper(machine) like upper('#39'%nb' +
+            '-mtz-ti-05%'#39')')
+        TabOrder = 1
+      end
+      object btnmonitorar: TButton
+        Left = 232
+        Top = 128
+        Width = 75
+        Height = 25
+        Caption = 'Monitorar'
+        TabOrder = 2
+        OnClick = btnmonitorarClick
+      end
+      object btnParaMonitor: TButton
+        Left = 328
+        Top = 128
+        Width = 75
+        Height = 25
+        Caption = 'Parar'
+        TabOrder = 3
+        OnClick = btnParaMonitorClick
+      end
+      object mmResultMonitor: TMemo
+        Left = 48
+        Top = 176
+        Width = 1169
+        Height = 457
+        TabOrder = 4
+      end
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'OracleConnection'
+    DriverName = 'Oracle'
+    GetDriverFunc = 'getSQLDriverORACLE'
+    LibraryName = 'dbexpora.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Oracle'
+      'DataBase=dbhomolog'
+      'User_Name=sapiensh'
+      'Password=sapiensh'
+      'RowsetSize=20'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Oracle TransIsolation=ReadCommited'
+      'OS Authentication=False'
+      'Multiple Transaction=False'
+      'Trim Char=False')
+    VendorLib = 'oci.dll'
+    Connected = True
+    Left = 656
+    Top = 16
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 816
+    Top = 16
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 728
+    Top = 16
+  end
+  object SQLQuery1: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT * FROM E099USU ')
+    SQLConnection = SQLConnection1
+    Left = 688
+    Top = 16
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 776
+    Top = 16
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 868
+    object AdicionarTabela1: TMenuItem
+      Caption = 'Adicionar Consulta Tabela'
+      OnClick = AdicionarTabela1Click
+    end
+    object CosnultarCampos1: TMenuItem
+      Caption = 'Consultar Campos'
+      OnClick = CosnultarCampos1Click
+    end
+  end
+  object PopupMenu2: TPopupMenu
+    Left = 908
+    object Adicionarcampo1: TMenuItem
+      Caption = 'Adicionar campo'
+      OnClick = Adicionarcampo1Click
+    end
+  end
+  object dsTabela: TDataSource
+    DataSet = cdsConsultaTabela
+    Left = 612
+  end
+  object qryConsultaTab: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 576
+  end
+  object cdsConsultaTabela: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspConsultatabela'
+    Left = 540
+  end
+  object dspConsultatabela: TDataSetProvider
+    DataSet = qryConsultaTab
+    Left = 500
+  end
+  object qryDescampoTab: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 580
+    Top = 32
+  end
+  object dsDescampoTab: TDataSource
+    DataSet = cdsDescCampo
+    Left = 616
+    Top = 33
+  end
+  object cdsDescCampo: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspDescCampo'
+    Left = 540
+    Top = 32
+  end
+  object dspDescCampo: TDataSetProvider
+    DataSet = qryDescampoTab
+    Left = 500
+    Top = 32
+  end
+  object qryGeral: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 1036
+    Top = 56
+  end
+  object cdsConsultageral: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dsConsultaGeral'
+    Left = 1116
+    Top = 16
+  end
+  object dsConsultaGeral: TDataSetProvider
+    DataSet = qryGeral
+    Left = 1084
+    Top = 16
+  end
+  object dsConsultatodos: TDataSource
+    DataSet = cdsConsultageral
+    Left = 1156
+    Top = 16
+  end
+  object cdsEnum: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspEnum'
+    Left = 540
+    Top = 72
+  end
+  object dspEnum: TDataSetProvider
+    DataSet = qryEnum
+    Left = 500
+    Top = 72
+  end
+  object qryEnum: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select sysdate from dual')
+    SQLConnection = SQLConnection1
+    Left = 580
+    Top = 72
+  end
+  object dsEnum: TDataSource
+    DataSet = cdsEnum
+    Left = 619
+    Top = 72
+  end
+  object dspRelacionamento: TDataSetProvider
+    DataSet = qryRelacionamento
+    Left = 500
+    Top = 112
+  end
+  object cdsRelacionamento: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspRelacionamento'
+    Left = 544
+    Top = 112
+  end
+  object dsRelacionamento: TDataSource
+    DataSet = cdsRelacionamento
+    Left = 620
+    Top = 112
+  end
+  object dsConsultaRelacioamento: TDataSource
+    DataSet = cdsConsultaRelacionamento
+    Left = 620
+    Top = 152
+  end
+  object cdsConsultaRelacionamento: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspConsultaRelacionamento'
+    Left = 545
+    Top = 147
+  end
+  object dspConsultaRelacionamento: TDataSetProvider
+    DataSet = qryConsultaRelacionamento
+    Left = 501
+    Top = 147
+  end
+  object qryRelacionamento: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 585
+    Top = 114
+  end
+  object qryConsultaRelacionamento: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 585
+    Top = 146
+  end
+  object dsDadosConsultaRelacionamento: TDataSource
+    DataSet = cdsDadosRelacionamento
+    Left = 621
+    Top = 187
+  end
+  object qryDadosRelacionamento: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 585
+    Top = 184
+  end
+  object cdsDadosRelacionamento: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspDadosRelacionamento'
+    Left = 548
+    Top = 184
+  end
+  object dspDadosRelacionamento: TDataSetProvider
+    DataSet = qryDadosRelacionamento
+    Left = 500
+    Top = 184
+  end
+  object DspMonitor: TDataSetProvider
+    DataSet = qryMonitor
+    Left = 500
+    Top = 224
+  end
+  object cdsMonitor: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspMonitor'
+    Left = 548
+    Top = 224
+  end
+  object qryMonitor: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 588
+    Top = 224
+  end
+  object DsMonitor: TDataSource
+    DataSet = cdsMonitor
+    Left = 620
+    Top = 224
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 452
+    Top = 120
+  end
+end
